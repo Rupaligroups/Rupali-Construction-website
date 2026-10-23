@@ -47,17 +47,5 @@ export const fallbackProjects = [
     "coverImage": "",
     "description": "Turnkey luxury duplex villa crafted with modern architecture, premium structural engineering, and high-end finishes in The Westerlies, Sector 108, Gurugram.",
     "images": "[]"
-  },
-  {
-    "id": 12,
-    "name": "Apartment At Sushant Lok",
-    "slug": "apartment-at-sushant-lok",
-    "type": "residential",
-    "location": "Sushant Lok 1, Gurugram",
-    "area": "1,800 sq ft",
-    "completionDate": "2024",
-    "coverImage": "",
-    "description": "Premium residential apartment floor with bespoke interior craftsmanship and civil upgrades in Sushant Lok, Gurgaon.",
-    "images": "[]"
   }
 ];
