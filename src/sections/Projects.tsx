@@ -256,6 +256,7 @@ function ProjectImage({ src, name }: { src?: string; name: string }) {
     return (
       <Image
         src={src}
+        sizes="(min-width: 1024px) 384px, (min-width: 768px) 50vw, 85vw"
         alt={`${name} - Construction and Architecture Project in Gurugram by Rupali Construction`}
         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
       />
