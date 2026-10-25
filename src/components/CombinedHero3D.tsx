@@ -220,7 +220,8 @@ export default function CombinedHero3D({ integrated = false }: { integrated?: bo
   }, []);
   return <div ref={containerRef} className={`relative h-full w-full overflow-hidden ${integrated ? "" : "rounded-3xl bg-[#e8e3d9]"}`}>
     <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-      <Canvas frameloop="demand" dpr={compact ? 1 : [1, 1.35]} camera={{ position: [0, 7, 27], fov: 40 }} gl={{ powerPreference: "low-power", antialias: !compact, alpha: true, stencil: false }} fallback={<img src="/villa_finished.webp" alt="" className="h-full w-full object-contain" />}>
+      {/* Supersample fine mobile details, with a 2x cap to bound GPU work. */}
+      <Canvas frameloop="demand" dpr={compact ? [1.5, 2] : [1, 1.35]} camera={{ position: [0, 7, 27], fov: 40 }} gl={{ powerPreference: "low-power", antialias: true, alpha: true, stencil: false }} fallback={<img src="/villa_finished.webp" alt="" className="h-full w-full object-contain" />}>
         <ambientLight intensity={1.25} /><hemisphereLight args={["#fff9ed", "#8d9c9c", 1.5]} />
         <directionalLight position={[-8, 15, 12]} intensity={2.6} color="#fff0d4" />
         <directionalLight position={[12, 6, -4]} intensity={1.1} color="#b9d6df" />
