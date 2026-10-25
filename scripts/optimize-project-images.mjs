@@ -7,7 +7,7 @@ import sharp from 'sharp';
 const root = process.cwd();
 const projects = process.argv[2]
   ? JSON.parse(await fs.readFile(process.argv[2], 'utf8'))
-  : (await (await fetch('https://rupaliconstruction.com/api/trpc/project.list?input=%7B%22json%22%3A%7B%22limit%22%3A50%7D%7D')).json()).result.data.json;
+  : (await (await fetch('https://rupaliconstruction.com/api/trpc/project.list?input=%7B%22json%22%3A%7B%22limit%22%3A50%7D%7D')).json()).result.data.json.items;
 const sources = [...new Set(projects.flatMap(project => JSON.parse(project.images || '[]')))];
 const serviceFiles = (await fs.readdir('public/images/services')).filter(name => name.endsWith('.webp'));
 sources.push(...serviceFiles.map(name => `/images/services/${name}`));
