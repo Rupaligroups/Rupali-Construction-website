@@ -112,13 +112,23 @@ export default function ProjectDetail() {
   const activeProject = dbProject ? (() => {
     const fallback = fallbackMatch;
     const rawImages = dbProject.images as unknown;
-    const hasImages = typeof rawImages === "string"
-      ? Boolean(rawImages.trim() && rawImages.trim() !== "[]")
-      : Array.isArray(rawImages) && rawImages.length > 0;
+    let dbImages: string[] = [];
+    if (typeof rawImages === "string") {
+      try {
+        const parsed = JSON.parse(rawImages);
+        dbImages = Array.isArray(parsed) ? parsed.filter((image): image is string => typeof image === "string" && image.trim().length > 0) : [];
+      } catch {
+        dbImages = rawImages.split(",").map((image) => image.trim()).filter(Boolean);
+      }
+    } else if (Array.isArray(rawImages)) {
+      dbImages = rawImages.filter((image): image is string => typeof image === "string" && image.trim().length > 0);
+    }
+    const fallbackImages = fallback?.images ? JSON.parse(fallback.images).filter((image: unknown): image is string => typeof image === "string" && image.trim().length > 0) : [];
+    const mergedImages = Array.from(new Set([...fallbackImages, ...dbImages]));
     return {
       ...dbProject,
-      coverImage: (dbProject as any).coverImage || fallback?.coverImage || "",
-      images: hasImages ? dbProject.images : fallback?.images || JSON.stringify([fallback?.coverImage].filter(Boolean)),
+      coverImage: fallback?.coverImage || (dbProject as any).coverImage || "",
+      images: JSON.stringify(mergedImages.length ? mergedImages : [fallback?.coverImage].filter(Boolean)),
     };
   })() : (fallbackMatch ? {
     id: fallbackMatch.id || 0,
