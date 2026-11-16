@@ -299,7 +299,7 @@ export default function ProjectDetail() {
                               }
                             }}
                             alt={`${activeProject.name} in ${activeProject.location || "Gurugram"} - Luxury Construction & Architectural Design photo ${idx + 1} by Rupali Construction`} 
-                            className={`w-full h-full pointer-events-none select-none ${activeProject.slug === 'cvn' && idx === 0 ? 'object-contain md:object-cover' : 'object-cover'}`}
+                            className={`w-full h-full pointer-events-none select-none ${activeProject.slug === 'cvn' ? 'object-contain md:object-cover' : 'object-cover'}`}
                           />
                           {idx === displayImages.length - 1 && (
                             <button 
@@ -584,7 +584,7 @@ export default function ProjectDetail() {
         <div className="mt-12 pt-8 md:mt-24 md:pt-16 border-t border-gray-200">
           <h2 className="text-3xl font-bold text-[#0F172A] mb-8">Other Properties</h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
             {(otherProjects?.items || []).slice(0, 3).map((op) => {
               let opImages: string[] = [];
               try {
@@ -607,9 +607,9 @@ export default function ProjectDetail() {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
-                  <div className="p-6">
-                    <h3 className="font-bold text-xl text-[#0F172A] mb-1 truncate">{op.name}</h3>
-                    <p className="text-gray-500 text-sm mb-4 truncate">{op.location}</p>
+                  <div className="p-3 md:p-6">
+                    <h3 className="font-bold text-sm sm:text-base md:text-xl text-[#0F172A] mb-1 break-words">{op.name}</h3>
+                    <p className="text-gray-500 text-xs md:text-sm md:mb-4 break-words">{op.location}</p>
                   </div>
                 </Link>
               );

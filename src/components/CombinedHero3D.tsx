@@ -111,8 +111,8 @@ function Skyline({ clock }: { clock: Clock }) {
   const { viewport, size } = useThree();
   const desktop = size.width >= 1024;
   const phone = size.width < 640;
-  const scale = Math.min(viewport.width * (desktop ? 0.0148 : phone ? 0.031 : 0.022), viewport.height * (desktop ? 0.033 : 0.036));
-  return <group position={[-viewport.width * (desktop ? 0.335 : phone ? 0.24 : 0.29), -viewport.height * (phone ? 0.17 : 0.25), 0]} scale={scale} rotation={[0, 0.22, 0]}>
+  const scale = Math.min(viewport.width * (desktop ? 0.0148 : phone ? 0.023 : 0.022), viewport.height * (desktop ? 0.033 : 0.036));
+  return <group position={[-viewport.width * (desktop ? 0.335 : phone ? 0.24 : 0.29), -viewport.height * (phone ? 0.20 : 0.25), 0]} scale={scale} rotation={[0, 0.22, 0]}>
     <BuildPart clock={clock} delay={0} rise><Solid at={[0, -0.25, 0]} size={[14.5, 0.5, 11]} color="#bac3bc" /></BuildPart>
     {Array.from({ length: 15 }, (_, i) => <group key={i} rotation={[0, i * 0.045, 0]}>
       <BuildPart clock={clock} delay={1 + i * 0.88} duration={1.05} rise anchor={i * 1.2}>
@@ -144,8 +144,8 @@ function Villa({ clock }: { clock: Clock }) {
   const { viewport, size } = useThree();
   const desktop = size.width >= 1024;
   const phone = size.width < 640;
-  const scale = Math.min(viewport.width * (desktop ? (size.width < 1280 ? 0.012 : 0.015) : phone ? 0.031 : 0.026), viewport.height * 0.05);
-  return <group position={[viewport.width * (desktop ? 0.30 : phone ? 0.20 : 0.23), -viewport.height * (phone ? 0.24 : 0.22), 0]} scale={scale} rotation={[0.04, -0.55, 0]}>
+  const scale = Math.min(viewport.width * (desktop ? (size.width < 1280 ? 0.012 : 0.015) : phone ? 0.027 : 0.026), viewport.height * 0.05);
+  return <group position={[viewport.width * (desktop ? 0.30 : phone ? 0.20 : 0.23), -viewport.height * (phone ? 0.26 : 0.22), 0]} scale={scale} rotation={[0.04, -0.55, 0]}>
     <BuildPart clock={clock} delay={0.3} rise><Solid at={[0, -0.25, 0]} size={[14, 0.5, 11]} color="#b9c0b2" /></BuildPart>
     <BuildPart clock={clock} delay={2} rise>
       {[-4.5, 0, 4.5].map(x => <group key={x}><Solid at={[x, 1.75, -3]} size={[0.35, 3.5, 0.35]} color="#56656a" /><Solid at={[x, 1.75, 3]} size={[0.35, 3.5, 0.35]} color="#56656a" /></group>)}

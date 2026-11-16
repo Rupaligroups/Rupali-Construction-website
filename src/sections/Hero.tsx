@@ -21,7 +21,7 @@ export default function Hero() {
       <ellipse cx="1160" cy="670" rx="210" ry="76" transform="rotate(18 1160 670)" />
       <ellipse cx="720" cy="650" rx="660" ry="156" transform="rotate(-10 720 650)" strokeDasharray="5 10" strokeOpacity="0.6" />
     </svg>
-    <div className="absolute inset-x-0 bottom-12 h-[270px] sm:bottom-12 sm:h-[430px] lg:inset-0 lg:h-full">{show3D && <Suspense fallback={null}><CombinedHero3D integrated /></Suspense>}</div>
+    <div className="absolute inset-x-0 bottom-6 h-[310px] sm:bottom-12 sm:h-[430px] lg:inset-0 lg:h-full">{show3D && <Suspense fallback={null}><CombinedHero3D integrated /></Suspense>}</div>
     <motion.div initial={reduceMotion ? false : {opacity:0,y:16}} animate={{opacity:1,y:0}} transition={{duration:0.8}} className="container-rc pointer-events-none relative z-20 mx-auto flex flex-col items-center text-center">
       <p className="mb-7 flex items-center gap-3 text-[9px] font-semibold uppercase tracking-[0.22em] text-[#526886] sm:text-[10px]"><span className="h-px w-6 bg-[var(--rc-orange)]" />Gurugram · Since 2001<span className="h-px w-6 bg-[var(--rc-orange)]" /></p>
       <h1 className="font-serif text-[clamp(3rem,6.5vw,6.5rem)] sm:text-[clamp(4.5rem,7vw,6.5rem)] lg:text-[clamp(4.5rem,6.5vw,6.5rem)] leading-[0.98] tracking-[-0.045em] text-[var(--rc-blue)]">Built around<br /><span className="italic text-[var(--rc-orange)]">your life.</span></h1>
