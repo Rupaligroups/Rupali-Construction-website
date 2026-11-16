@@ -167,7 +167,7 @@ export default function ServiceDetail() {
       />
       <Navbar />
 
-      <main className="pt-28 pb-20">
+      <main className="pt-24 pb-14 md:pt-28 md:pb-20">
         
         {/* Navigation Breadcrumb */}
         <div className="container-rc mb-6">
@@ -181,10 +181,10 @@ export default function ServiceDetail() {
         </div>
 
         {/* Hero Banner Section */}
-        <div className="container-rc mb-16">
-          <div className="relative rounded-[32px] overflow-hidden bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white p-6 sm:p-10 md:p-14 lg:p-16 shadow-2xl border border-slate-800">
+        <div className="container-rc mb-10 md:mb-16">
+          <div className="relative rounded-[28px] md:rounded-[32px] overflow-hidden bg-gradient-to-br from-[#0F2747] via-[#112f53] to-[#0F172A] text-white p-5 sm:p-10 md:p-14 lg:p-16 shadow-xl border border-slate-800">
             {/* Ambient Background Glow & Image Overlay */}
-            <div className="absolute right-0 top-0 w-full md:w-3/5 h-full opacity-20 md:opacity-30 pointer-events-none mix-blend-luminosity overflow-hidden">
+            <div className="hidden md:block absolute right-0 top-0 w-3/5 h-full opacity-30 pointer-events-none mix-blend-luminosity overflow-hidden">
               <img 
                 src={service.heroImage} 
                 alt={service.title} 
@@ -194,22 +194,26 @@ export default function ServiceDetail() {
             </div>
 
             <div className="relative z-10 max-w-3xl">
+              <div className="relative mb-5 overflow-hidden rounded-2xl md:hidden">
+                <img src={service.heroImage} alt="" className="aspect-[16/9] w-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0F2747]/45 to-transparent" />
+              </div>
               {/* Category Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs font-semibold text-[var(--rc-orange)] mb-6 shadow-sm">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs font-semibold text-[#ffb080] mb-4 md:mb-6 shadow-sm">
                 <IconComponent className="w-4 h-4 text-[var(--rc-orange)]" />
-                <span>Specialized Service Category</span>
+                <span>Construction &amp; Design Services</span>
               </div>
 
               {/* Title & Tagline */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white tracking-tight mb-4 leading-[1.15]">
                 {service.title}
               </h1>
-              <p className="text-base sm:text-lg md:text-xl text-gray-300 font-light mb-8 max-w-2xl leading-relaxed">
+              <p className="text-sm sm:text-lg md:text-xl text-gray-200 font-light mb-5 md:mb-8 max-w-2xl leading-relaxed">
                 {service.tagline}
               </p>
 
               {/* Action Buttons */}
-              <div className="flex flex-wrap items-center gap-4 mb-10">
+              <div className="flex flex-wrap items-center gap-3 mb-6 md:mb-10">
                 <button
                   type="button"
                   onClick={() => setIsConsultOpen(true)}
@@ -232,11 +236,11 @@ export default function ServiceDetail() {
               </div>
 
               {/* Highlights Metric Bar */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-white/10">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 pt-4 md:pt-6 border-t border-white/10">
                 {service.highlights.map((h, i) => (
-                  <div key={i} className="bg-white/5 backdrop-blur-xs p-3.5 rounded-2xl border border-white/5">
-                    <p className="text-xl sm:text-2xl font-bold font-serif text-white">{h.value}</p>
-                    <p className="text-xs text-gray-400 font-medium uppercase tracking-wider mt-0.5">{h.label}</p>
+                  <div key={i} className="bg-white/5 backdrop-blur-xs p-3 sm:p-3.5 rounded-xl sm:rounded-2xl border border-white/10">
+                    <p className="text-lg sm:text-2xl font-bold font-serif text-white leading-tight">{h.value}</p>
+                    <p className="text-[10px] sm:text-xs text-gray-300 font-medium uppercase tracking-wider mt-1">{h.label}</p>
                   </div>
                 ))}
               </div>
@@ -245,8 +249,8 @@ export default function ServiceDetail() {
         </div>
 
         {/* Overview Section */}
-        <div className="container-rc mb-20">
-          <div className="bg-white rounded-3xl p-6 sm:p-10 border border-gray-200/80 shadow-sm max-w-4xl mx-auto">
+        <div className="container-rc mb-12 md:mb-20">
+          <div className="bg-[#eef4fc] rounded-3xl p-6 sm:p-10 border border-[#dbe6f4] shadow-sm max-w-4xl mx-auto">
             <span className="text-xs font-bold text-[var(--rc-orange)] uppercase tracking-wider block mb-2">
               Scope of Service & Capability
             </span>
@@ -260,8 +264,8 @@ export default function ServiceDetail() {
         </div>
 
         {/* Section 1: How We Do It (Step-by-Step Execution Process) */}
-        <section className="container-rc mb-24">
-          <div className="text-center max-w-3xl mx-auto mb-14">
+        <section className="container-rc mb-14 md:mb-24">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-14">
             <span className="text-xs font-bold text-[var(--rc-blue)] uppercase tracking-widest px-3 py-1 rounded-full bg-blue-50 border border-blue-100 inline-block mb-3">
               Execution Methodology
             </span>
@@ -273,11 +277,11 @@ export default function ServiceDetail() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
             {service.steps.map((step, idx) => (
               <div 
                 key={idx}
-                className="group relative bg-white rounded-3xl p-6 sm:p-8 border border-gray-200/80 hover:border-[var(--rc-orange)]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+                className="group relative bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-gray-200/80 hover:border-[var(--rc-orange)]/40 hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
@@ -318,10 +322,10 @@ export default function ServiceDetail() {
         </section>
 
         {/* Section 2: Key Features & Quality Checks We Inspect */}
-        <section className="bg-slate-900 text-white py-20 mb-24 relative overflow-hidden">
+        <section className="bg-slate-900 text-white py-12 md:py-20 mb-14 md:mb-24 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--rc-orange)]/10 rounded-full blur-3xl pointer-events-none" />
           <div className="container-rc relative z-10">
-            <div className="text-center max-w-3xl mx-auto mb-14">
+            <div className="text-center max-w-3xl mx-auto mb-8 md:mb-14">
               <span className="text-xs font-bold text-[var(--rc-orange)] uppercase tracking-widest px-3 py-1 rounded-full bg-white/10 border border-white/15 inline-block mb-3">
                 Quality Verification Standards
               </span>
@@ -358,8 +362,8 @@ export default function ServiceDetail() {
         </section>
 
         {/* Section 3: Why Rupali Construction (Our USPs) */}
-        <section className="container-rc mb-24">
-          <div className="text-center max-w-3xl mx-auto mb-14">
+        <section className="container-rc mb-14 md:mb-24">
+          <div className="text-center max-w-3xl mx-auto mb-8 md:mb-14">
             <span className="text-xs font-bold text-[var(--rc-orange)] uppercase tracking-widest px-3 py-1 rounded-full bg-orange-50 border border-orange-100 inline-block mb-3">
               The Rupali Guarantee
             </span>

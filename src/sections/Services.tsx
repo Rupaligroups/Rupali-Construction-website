@@ -72,7 +72,7 @@ export default function Services({ transparentBg = false, homePreview = false }:
       <div aria-hidden="true" className="pointer-events-none absolute -right-40 -top-60 h-[600px] w-[600px] rounded-full bg-[#5089d5]/20 blur-[100px]" />
       <div className="container-rc relative">
         <div className="mb-8 flex flex-col justify-between gap-5 sm:mb-12 md:flex-row md:items-end">
-          <div><p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#ffad78]">Our expertise</p><h2 className="font-serif text-4xl leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">Every space.<br /><span className="italic text-[#b9d1f2]">Every possibility.</span></h2></div>
+          <div><p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-[#ffad78]">Our expertise</p><h2 className="font-serif text-[2.15rem] leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">Every space.<br /><span className="italic text-[#b9d1f2]">Every possibility.</span></h2></div>
           <p className="max-w-xs text-sm leading-relaxed text-[#d0def0]">From a new beginning to a thoughtful transformation. Find the right team for your next chapter.</p>
         </div>
         <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:gap-6">

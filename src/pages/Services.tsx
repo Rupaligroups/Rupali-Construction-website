@@ -83,7 +83,7 @@ export default function Services() {
             <div className="grid items-center gap-9 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
               <motion.div initial={reduceMotion ? false : {opacity:0,y:16}} animate={{opacity:1,y:0}} transition={{duration:0.6}}>
                 <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-[var(--rc-orange)]">From concept to completion</p>
-                <h1 className="font-serif text-5xl leading-[1.02] tracking-tight text-[var(--rc-blue)] sm:text-7xl lg:text-[5.5rem]">One team.<br /><span className="italic">Every stage.</span></h1>
+                <h1 className="font-serif text-[2.8rem] leading-[1.02] tracking-tight text-[var(--rc-blue)] sm:text-7xl lg:text-[5.5rem]">One team.<br /><span className="italic">Every stage.</span></h1>
                 <p className="mt-5 max-w-md text-sm leading-relaxed text-[#5b6c83] sm:text-base">Construction, interiors, renovation and engineering in Gurugram. Choose the support your space needs, with a clear path from planning to handover.</p>
                 <div className="mt-7 flex flex-wrap items-center gap-3"><button type="button" onClick={()=>setConsultService(activeService.shortTitle)} className="inline-flex min-h-12 items-center gap-3 rounded-full bg-[var(--rc-blue)] px-6 py-3 text-xs font-semibold text-white transition-colors hover:bg-[#17477e]">Discuss your project<ArrowUpRight className="h-4 w-4" /></button><a href="#all-services" className="inline-flex min-h-12 items-center gap-2 px-3 text-xs font-semibold text-[var(--rc-blue)]">Explore services<ArrowRight className="h-4 w-4" /></a></div>
               </motion.div>
@@ -96,7 +96,7 @@ export default function Services() {
           </div>
         </section>
 
-        <section id="all-services" aria-labelledby="services-heading" className="scroll-mt-24 py-12 sm:py-20">
+        <section id="all-services" aria-labelledby="services-heading" className="scroll-mt-24 py-10 sm:py-20">
           <div className="container-rc">
             <div className="mb-7 flex flex-col justify-between gap-4 sm:mb-10 md:flex-row md:items-end"><div><p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-[var(--rc-orange)]">Our expertise</p><h2 id="services-heading" className="font-serif text-3xl leading-tight text-[var(--rc-blue)] sm:text-5xl">The right support.<br /><span className="italic">For your next chapter.</span></h2></div><p className="max-w-xs text-sm leading-relaxed text-[#66758b]">Six areas of expertise, working together around your project.</p></div>
             <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3 lg:gap-6">

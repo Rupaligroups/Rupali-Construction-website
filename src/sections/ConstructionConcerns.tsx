@@ -17,13 +17,13 @@ export default function ConstructionConcerns() {
         <p className="mb-4 text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--rc-orange)]">A clearer way to build</p>
         <h2 id="construction-concerns" className="font-serif text-3xl leading-[1.1] text-[var(--rc-dark)] sm:text-5xl lg:text-6xl">Your questions.<br /><span className="italic">A clearer way forward.</span></h2>
       </div>
-      <div className="flex flex-col gap-5 sm:gap-7">
+      <div className="flex flex-col gap-3 sm:gap-7">
         {constructionConcerns.slice(0, 3).map((item, index) => <motion.article key={item.concern}
           initial={reduceMotion ? false : { opacity: 0, x: index % 2 ? 32 : -32, y: 8 }}
           whileInView={{ opacity: 1, x: 0, y: 0 }}
           viewport={{ once: true, amount: 0.6, margin: "0px 0px -30px 0px" }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className={`w-[95%] rounded-2xl border border-[var(--rc-blue)]/10 bg-white p-5 shadow-[0_8px_30px_-24px_rgba(11,46,89,0.3)] sm:w-[88%] sm:p-7 ${index % 2 ? "ml-auto" : "mr-auto"}`}>
+          className={`w-full rounded-2xl border border-[var(--rc-blue)]/10 bg-white p-4 shadow-[0_8px_30px_-24px_rgba(11,46,89,0.3)] sm:w-[88%] sm:p-7 ${index % 2 ? "ml-auto" : "mr-auto"}`}>
           <div className="flex items-start gap-4 sm:gap-6">
             <span className="mt-1 font-mono text-xs text-[var(--rc-orange)] sm:text-sm">0{index + 1}</span>
             <div><h3 className="text-lg font-medium leading-snug tracking-tight text-[var(--rc-blue)] sm:text-2xl">{item.question}</h3>
