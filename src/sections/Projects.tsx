@@ -26,7 +26,10 @@ export default function Projects() {
     limit: 50,
   });
 
-  const liveProjects = data?.items || [];
+  const liveProjects = (data?.items || []).map(project => {
+    const fallback = project.slug === "cvn" ? fallbackProjects.find(item => item.slug === "cvn") : undefined;
+    return fallback ? { ...project, completionDate: fallback.completionDate } : project;
+  });
   const projects = [
     ...liveProjects,
     ...fallbackProjects.filter((fallback) => !liveProjects.some((project: any) => project.slug === fallback.slug)),

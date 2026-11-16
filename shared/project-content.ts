@@ -7,9 +7,9 @@ export const fallbackProjects = [
     "type": "commercial",
     "location": "Gurugram",
     "area": "",
-    "completionDate": "2025",
+    "completionDate": "November 2026",
     "coverImage": "https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/cvn-kalari-main.webp",
-    "description": "A healing and wellness centre developed for CVN Kalari, providing traditional Kerala Ayurvedic orthopaedic pain relief and natural healing services.",
+    "description": "Completed in November 2026, CVN Kalari is a wellness centre in Gurugram dedicated to Marma healing, Kerala Ayurveda and orthopaedic pain relief. Rupali Construction developed a welcoming setting with thoughtfully finished treatment rooms, clean interiors and details inspired by Kerala's healing heritage. The project brings together careful workmanship and practical spaces suited to the centre's day-to-day needs.",
     "images": JSON.stringify(['main', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10'].map(file => `https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/cvn-kalari-${file}.webp`))
   },
   {

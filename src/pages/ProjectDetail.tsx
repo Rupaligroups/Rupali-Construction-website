@@ -127,6 +127,7 @@ export default function ProjectDetail() {
     const mergedImages = Array.from(new Set([...fallbackImages, ...dbImages]));
     return {
       ...dbProject,
+      ...(dbProject.slug === 'cvn' && fallback ? { description: fallback.description, completionDate: fallback.completionDate } : {}),
       coverImage: fallback?.coverImage || (dbProject as any).coverImage || "",
       images: JSON.stringify(mergedImages.length ? mergedImages : [fallback?.coverImage].filter(Boolean)),
     };

@@ -263,7 +263,7 @@ async function resolvePageData(pathname: string): Promise<PageData> {
 
         const title = `${proj.name} | Luxury Architecture in ${proj.location || "Gurugram"} by Rupali Construction`;
         const fallback = fallbackProjects.find(f => f.slug === proj.slug || f.name === proj.name);
-        const description = (proj.description || `Explore ${proj.name}, a turnkey ${proj.type} architectural masterpiece built by Rupali Construction in ${proj.location || "Gurugram"}.`).substring(0, 300);
+        const description = ((proj.slug === "cvn" ? fallback?.description : proj.description) || `Explore ${proj.name}, a turnkey ${proj.type} architectural masterpiece built by Rupali Construction in ${proj.location || "Gurugram"}.`).substring(0, 300);
         let imageUrl = DEFAULT_IMAGE;
         try {
           const rawImgs = (proj.images && proj.images.trim() && proj.images.trim() !== "[]") ? proj.images : fallback?.images;
