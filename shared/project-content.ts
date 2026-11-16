@@ -1,6 +1,18 @@
 // Public content recovered from the repository. Original media references are retained in recovery/original-project-media.json.
 export const fallbackProjects = [
   {
+    "id": "cvn-local",
+    "name": "CVN",
+    "slug": "cvn",
+    "type": "commercial",
+    "location": "Gurugram",
+    "area": "",
+    "completionDate": "2025",
+    "coverImage": "/uploads/cvn-front.webp",
+    "description": "A healing and wellness centre developed for CVN Kalari, providing traditional Kerala Ayurvedic orthopaedic pain relief and natural healing services.",
+    "images": "[\"/uploads/cvn-front.webp\",\"/uploads/cvn-cutting.webp\"]"
+  },
+  {
     "id": 16,
     "name": "QuickIn Stayz",
     "slug": "quickin-stayz",

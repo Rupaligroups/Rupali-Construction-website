@@ -26,7 +26,11 @@ export default function Projects() {
     limit: 50,
   });
 
-  const projects = data?.items || [];
+  const liveProjects = data?.items || [];
+  const projects = [
+    ...liveProjects,
+    ...fallbackProjects.filter((fallback) => !liveProjects.some((project: any) => project.slug === fallback.slug)),
+  ];
 
   const getProjectImage = (project: any) => {
     if (project.images) {
