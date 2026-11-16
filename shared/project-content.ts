@@ -2,15 +2,15 @@
 export const fallbackProjects = [
   {
     "id": "cvn-local",
-    "name": "CVN",
+    "name": "CVN Kalari",
     "slug": "cvn",
     "type": "commercial",
     "location": "Gurugram",
     "area": "",
     "completionDate": "2025",
-    "coverImage": "/uploads/cvn-front.webp",
+    "coverImage": "https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/cvn-kalari-main.webp",
     "description": "A healing and wellness centre developed for CVN Kalari, providing traditional Kerala Ayurvedic orthopaedic pain relief and natural healing services.",
-    "images": "[\"/uploads/cvn-front.webp\",\"/uploads/cvn-cutting.webp\"]"
+    "images": JSON.stringify(['main', '01', '02', '03', '04', '05', '06', '07', '08', '09', '10'].map(file => `https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/cvn-kalari-${file}.webp`))
   },
   {
     "id": 16,
