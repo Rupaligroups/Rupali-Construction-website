@@ -280,7 +280,7 @@ export default function ProjectDetail() {
                         className={`pl-4 min-w-0 ${widthClass}`}
                       >
                         <div 
-                          className="h-[360px] sm:h-[420px] md:h-[460px] lg:h-[480px] xl:h-[560px] rounded-[24px] md:rounded-[32px] overflow-hidden shadow-sm relative cursor-pointer"
+                          className="h-[360px] sm:h-[420px] md:h-[460px] lg:h-[480px] xl:h-[560px] rounded-[24px] md:rounded-[32px] overflow-hidden shadow-sm relative cursor-pointer bg-[#f0efed]"
                           onClick={() => {
                             if (emblaApi && !(emblaApi as any).clickAllowed?.()) return;
                             setIsGalleryOpen(true);
@@ -299,7 +299,7 @@ export default function ProjectDetail() {
                               }
                             }}
                             alt={`${activeProject.name} in ${activeProject.location || "Gurugram"} - Luxury Construction & Architectural Design photo ${idx + 1} by Rupali Construction`} 
-                            className="w-full h-full object-cover pointer-events-none select-none" 
+                            className={`w-full h-full pointer-events-none select-none ${activeProject.slug === 'cvn' && idx === 0 ? 'object-contain md:object-cover' : 'object-cover'}`}
                           />
                           {idx === displayImages.length - 1 && (
                             <button 
