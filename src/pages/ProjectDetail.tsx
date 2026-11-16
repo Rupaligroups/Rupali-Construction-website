@@ -562,16 +562,16 @@ export default function ProjectDetail() {
         )}
 
         {/* Custom CTA Section */}
-        <div className="mt-16 bg-gradient-to-br from-[var(--rc-blue)] to-[#09358A] rounded-[32px] p-10 md:p-14 text-white relative overflow-hidden shadow-xl">
+        <div className="mt-10 md:mt-16 bg-gradient-to-br from-[var(--rc-blue)] to-[#09358A] rounded-[32px] p-5 sm:p-8 md:p-14 text-white relative overflow-hidden shadow-xl">
           <div className="absolute top-0 right-0 w-96 h-96 bg-white opacity-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
           <div className="relative z-10 max-w-2xl">
-            <h2 className="text-4xl font-bold mb-4 font-serif">Want a custom {activeProject.type === 'residential' ? 'home' : 'project'} like this?</h2>
-            <p className="text-white/80 text-xl mb-10 leading-relaxed">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 md:mb-4 font-serif">Want a custom {activeProject.type === 'residential' ? 'home' : 'project'} like this?</h2>
+            <p className="text-white/80 text-sm sm:text-base md:text-xl mb-5 md:mb-10 leading-relaxed">
               Every project is unique. Get a personalized estimate for a construction customized to your exact requirements and lifestyle.
             </p>
             <Link 
               to="/#estimate" 
-              className="inline-flex items-center justify-center px-10 py-5 bg-[var(--rc-orange)] text-white text-lg font-bold rounded-full hover:scale-105 hover:shadow-[0_10px_25px_rgba(249,115,22,0.4)] transition-all active:scale-95"
+              className="inline-flex items-center justify-center min-h-11 px-5 py-3 md:px-10 md:py-5 bg-[var(--rc-orange)] text-white text-sm md:text-lg font-bold rounded-full hover:scale-105 hover:shadow-[0_10px_25px_rgba(249,115,22,0.4)] transition-all active:scale-95"
             >
               Calculate Custom Estimate
             </Link>
