@@ -23,7 +23,7 @@ export const localBusinessSchema = {
   name: business.name,
   alternateName: "Rupali Homes",
   url: business.url,
-  logo: `${business.url}/logo-icon.png`,
+  logo: `${business.url}/logo-icon.webp`,
   image: `${business.url}/logo-main.webp`,
   description: "Home construction, turnkey villas, architecture, renovation and interiors in Gurugram (Gurgaon) and Delhi NCR.",
   telephone: "+919311830088",

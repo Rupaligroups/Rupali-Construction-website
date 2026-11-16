@@ -17,7 +17,7 @@ export default function SEO({
   description = homeSeo.description,
   keywords = homeSeo.keywords,
   type = "website",
-  image = "https://rupaliconstruction.com/logo-main.png",
+  image = "https://rupaliconstruction.com/logo-main.webp",
   url = "https://rupaliconstruction.com",
   schema,
   noindex = false

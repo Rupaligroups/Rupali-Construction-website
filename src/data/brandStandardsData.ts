@@ -2496,12 +2496,12 @@ const brandImages: Record<string, string> = {
   Aludecor: "/images/material-library/Aludecor.svg",
   Syska: "/images/material-library/Syska.webp",
   Daikin: "/images/material-library/daikin-logo.webp",
-  "Tata Steel": "/images/brands/Tata_Tiscon.png",
+  "Tata Steel": "/images/brands/Tata_Tiscon.webp",
   SAIL: "/images/material-library/SAIL.webp",
-  "Schneider Electric": "/images/brands/Schneider_Electric.png",
+  "Schneider Electric": "/images/brands/Schneider_Electric.webp",
   Hafele: "/images/material-library/Hafele.webp",
-  "Saint-Gobain": "/images/brands/Saint-Gobain.png",
-  "Pidilite (Dr. Fixit)": "/images/brands/Pidilite__Dr__Fixit_.png",
+  "Saint-Gobain": "/images/brands/Saint-Gobain.webp",
+  "Pidilite (Dr. Fixit)": "/images/brands/Pidilite__Dr__Fixit_.webp",
 };
 const productImages: Record<string, string> = {
   "UltraTech OPC 53 Grade": "/images/material-library/ultratech-opc.webp",
