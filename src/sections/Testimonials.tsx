@@ -27,7 +27,7 @@ export default function Testimonials() {
   }));
 
   return (
-    <section className="pt-16 pb-6 sm:pt-20 sm:pb-6 lg:pt-24 lg:pb-6 bg-[var(--rc-gray)] relative overflow-hidden">
+    <section className="pt-10 pb-6 sm:pt-20 sm:pb-6 lg:pt-24 lg:pb-6 bg-[var(--rc-gray)] relative overflow-hidden">
       <div className="absolute inset-0 flex items-center justify-end pointer-events-none opacity-[0.03] translate-x-1/4">
         <img
           src="/logo-icon.webp"

@@ -11,7 +11,9 @@ export default function CinematicReveal() {
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (window.matchMedia('(max-width: 767px)').matches) return;
     const ctx = gsap.context(() => {
+      gsap.set(contentRef.current, { y: 50 });
       // Pin the section and animate elements based on scroll
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -39,7 +41,7 @@ export default function CinematicReveal() {
   }, []);
 
   return (
-    <section id="cinematic-reveal-section" ref={containerRef} className="relative h-screen w-full overflow-hidden bg-[var(--rc-dark)]">
+    <section id="cinematic-reveal-section" ref={containerRef} className="relative min-h-[440px] md:min-h-0 md:h-screen w-full overflow-hidden bg-[var(--rc-dark)]">
       {/* Architecture Image (Initially hidden) */}
       <img
         ref={imageRef}
@@ -47,11 +49,11 @@ export default function CinematicReveal() {
         loading="lazy"
         decoding="async"
         alt="Modern Architecture"
-        className="absolute inset-0 w-full h-full object-cover object-[center_40%] origin-center opacity-0 scale-100 will-change-transform"
+        className="absolute inset-0 w-full h-full object-cover object-[center_40%] origin-center opacity-100 md:opacity-0 scale-100 will-change-transform"
       />
 
       {/* Cinematic Text Overlay (Vision to Reality) */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div className="absolute inset-0 hidden md:flex items-center justify-center pointer-events-none">
         <div ref={textRef} className="text-center opacity-0 scale-90 will-change-transform">
           <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-[8.5rem] xl:text-[11rem] leading-none font-serif italic text-white drop-shadow-2xl">
             Vision
@@ -64,8 +66,7 @@ export default function CinematicReveal() {
 
       <div 
         ref={contentRef} 
-        className="absolute inset-0 flex flex-col justify-start pt-24 md:pt-28 lg:pt-36 px-6 md:px-16 lg:px-24 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none opacity-0"
-        style={{ transform: "translateY(50px)" }}
+        className="relative md:absolute inset-0 flex flex-col justify-start py-12 md:py-0 md:pt-28 lg:pt-36 px-6 md:px-16 lg:px-24 bg-gradient-to-b from-black/80 via-black/40 to-transparent pointer-events-none opacity-100 md:opacity-0"
       >
         <div className="max-w-3xl pointer-events-auto">
           <p className="text-[var(--rc-orange)] font-mono text-sm tracking-[0.2em] uppercase mb-4 font-bold drop-shadow-md">

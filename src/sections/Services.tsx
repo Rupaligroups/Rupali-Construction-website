@@ -68,7 +68,7 @@ export default function Services({ transparentBg = false, homePreview = false }:
       { src: "/images/services/interiors.webp", alt: "Illustrative photo of finishes, fabrics and samples for interior design" },
     ];
     const descriptions = ["A home designed around the way you live.", "Spaces that work as hard as your business.", "A fresh chapter for the space you already love.", "Materials, light and details, brought together."];
-    return <section id="services" className="relative overflow-hidden bg-[var(--rc-blue)] py-14 sm:py-20 lg:py-24">
+    return <section id="services" className="relative overflow-hidden bg-[var(--rc-blue)] py-10 sm:py-20 lg:py-24">
       <div aria-hidden="true" className="pointer-events-none absolute -right-40 -top-60 h-[600px] w-[600px] rounded-full bg-[#5089d5]/20 blur-[100px]" />
       <div className="container-rc relative">
         <div className="mb-8 flex flex-col justify-between gap-5 sm:mb-12 md:flex-row md:items-end">

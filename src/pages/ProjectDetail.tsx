@@ -236,7 +236,7 @@ export default function ProjectDetail() {
       />
       <Navbar />
 
-      <main className="container-rc pt-28 pb-20">
+      <main className="container-rc pt-24 pb-12 md:pt-28 md:pb-20">
         
         {/* Back Link */}
         <Link to="/projects" className="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[var(--rc-dark)] mb-6 font-medium transition-colors">
@@ -280,7 +280,7 @@ export default function ProjectDetail() {
                         className={`pl-4 min-w-0 ${widthClass}`}
                       >
                         <div 
-                          className="h-[360px] sm:h-[420px] md:h-[460px] lg:h-[480px] xl:h-[560px] rounded-[24px] md:rounded-[32px] overflow-hidden shadow-sm relative cursor-pointer bg-[#f0efed]"
+                          className={`${activeProject.slug === 'cvn' ? 'h-[260px] sm:h-[420px]' : 'h-[360px] sm:h-[420px]'} md:h-[460px] lg:h-[480px] xl:h-[560px] rounded-[24px] md:rounded-[32px] overflow-hidden shadow-sm relative cursor-pointer bg-[#f0efed]`}
                           onClick={() => {
                             if (emblaApi && !(emblaApi as any).clickAllowed?.()) return;
                             setIsGalleryOpen(true);
@@ -328,7 +328,7 @@ export default function ProjectDetail() {
                     e.stopPropagation();
                     scrollPrev();
                   }}
-                  className="absolute left-4 top-[190px] sm:top-[230px] md:top-[250px] lg:top-[290px] -translate-y-1/2 w-11 h-11 bg-white/90 backdrop-blur rounded-full shadow-lg flex items-center justify-center opacity-85 md:opacity-0 group-hover:opacity-100 transition-opacity z-10 hover:bg-white text-gray-700 active:scale-95 shadow-black/10"
+                  className={`absolute left-4 ${activeProject.slug === 'cvn' ? 'top-[130px]' : 'top-[190px]'} sm:top-[230px] md:top-[250px] lg:top-[290px] -translate-y-1/2 w-11 h-11 bg-white/90 backdrop-blur rounded-full shadow-lg flex items-center justify-center opacity-85 md:opacity-0 group-hover:opacity-100 transition-opacity z-10 hover:bg-white text-gray-700 active:scale-95 shadow-black/10`}
                   aria-label="Previous photo"
                 >
                   <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
@@ -341,7 +341,7 @@ export default function ProjectDetail() {
                     e.stopPropagation();
                     scrollNext();
                   }}
-                  className="absolute right-4 top-[190px] sm:top-[230px] md:top-[250px] lg:top-[290px] -translate-y-1/2 w-11 h-11 bg-white/90 backdrop-blur rounded-full shadow-lg flex items-center justify-center opacity-85 md:opacity-0 group-hover:opacity-100 transition-opacity z-10 hover:bg-white text-gray-700 active:scale-95 shadow-black/10"
+                  className={`absolute right-4 ${activeProject.slug === 'cvn' ? 'top-[130px]' : 'top-[190px]'} sm:top-[230px] md:top-[250px] lg:top-[290px] -translate-y-1/2 w-11 h-11 bg-white/90 backdrop-blur rounded-full shadow-lg flex items-center justify-center opacity-85 md:opacity-0 group-hover:opacity-100 transition-opacity z-10 hover:bg-white text-gray-700 active:scale-95 shadow-black/10`}
                   aria-label="Next photo"
                 >
                   <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg>
@@ -581,7 +581,7 @@ export default function ProjectDetail() {
         <InstagramFeed />
 
         {/* Other Properties Section */}
-        <div className="mt-24 pt-16 border-t border-gray-200">
+        <div className="mt-12 pt-8 md:mt-24 md:pt-16 border-t border-gray-200">
           <h2 className="text-3xl font-bold text-[#0F172A] mb-8">Other Properties</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
