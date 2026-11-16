@@ -20,9 +20,9 @@ export const fallbackProjects = [
     "location": "Block - C, Sushant Lok 1, Sector 43, Gurugram",
     "area": "35,000 sq ft",
     "completionDate": "2024",
-    "coverImage": "/images/responsive/quickin-stayz-exterior-ed2d2dbf1a23-1122.webp",
+    "coverImage": "/uploads/hotel-10.webp",
     "description": "Modern turnkey commercial hospitality and boutique suites located in Sushant Lok 1, Sector 43, Gurugram.",
-    "images": "[\"/images/responsive/quickin-stayz-exterior-ed2d2dbf1a23-1122.webp\",\"/images/responsive/quickin-stayz-entrance-fde7e34df363-1122.webp\",\"/images/responsive/quickin-stayz-reception-f6bfb6f916c3-1122.webp\",\"/images/responsive/quickin-stayz-room-interior-8dab84587aa8-1122.webp\",\"/images/responsive/quickin-stayz-double-room-9d3134579752-1122.webp\",\"/images/responsive/quickin-stayz-bathroom-ede0ae565fad-1122.webp\"]"
+    "images": "[\"/uploads/hotel-10.webp\",\"/uploads/hotel-dusk.webp\",\"/images/responsive/quickin-stayz-exterior-ed2d2dbf1a23-1122.webp\",\"/images/responsive/quickin-stayz-entrance-fde7e34df363-1122.webp\",\"/images/responsive/quickin-stayz-reception-f6bfb6f916c3-1122.webp\",\"/images/responsive/quickin-stayz-room-interior-8dab84587aa8-1122.webp\",\"/images/responsive/quickin-stayz-double-room-9d3134579752-1122.webp\",\"/images/responsive/quickin-stayz-bathroom-ede0ae565fad-1122.webp\"]"
   },
   {
     "id": 15,
