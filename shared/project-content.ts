@@ -20,9 +20,9 @@ export const fallbackProjects = [
     "location": "Block - C, Sushant Lok 1, Sector 43, Gurugram",
     "area": "35,000 sq ft",
     "completionDate": "2024",
-    "coverImage": "/uploads/hotel-10.webp",
+    "coverImage": "https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/quickin-stayz-entrance.webp",
     "description": "Modern turnkey commercial hospitality and boutique suites located in Sushant Lok 1, Sector 43, Gurugram.",
-    "images": "[\"/uploads/hotel-10.webp\",\"/uploads/hotel-dusk.webp\",\"/images/responsive/quickin-stayz-exterior-ed2d2dbf1a23-1122.webp\",\"/images/responsive/quickin-stayz-entrance-fde7e34df363-1122.webp\",\"/images/responsive/quickin-stayz-reception-f6bfb6f916c3-1122.webp\",\"/images/responsive/quickin-stayz-room-interior-8dab84587aa8-1122.webp\",\"/images/responsive/quickin-stayz-double-room-9d3134579752-1122.webp\",\"/images/responsive/quickin-stayz-bathroom-ede0ae565fad-1122.webp\"]"
+    "images": "[\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/quickin-stayz-entrance.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/quickin-stayz-exterior.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/quickin-stayz-twin-room.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/quickin-stayz-reception.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/quickin-stayz-kitchenette.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/quickin-stayz-room-seating.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/quickin-stayz-bathroom.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/quickin-stayz-double-room.webp\"]"
   },
   {
     "id": 15,
@@ -32,9 +32,9 @@ export const fallbackProjects = [
     "location": "Sector 67, M3M URBANA, Gurgaon",
     "area": "11,000 sq ft",
     "completionDate": "2024",
-    "coverImage": "https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/1785225169394-250938775.png",
+    "coverImage": "https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-training-floor.webp",
     "description": "State-of-the-art commercial fitness facility with heavy reinforced civil flooring, industrial acoustic isolation, and premium MEP systems at M3M Urbana, Sector 67, Gurgaon.",
-    "images": "[\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/1785225169394-250938775.png\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/1785225169295-375624683.png\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/1785225169344-190570374.png\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/1785225169367-222471526.png\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/1785225169320-757856043.png\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/1785225169227-411774767.png\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/1785225169271-859573308.png\"]"
+    "images": "[\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-training-floor.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-training-floor-interior.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-strength-area.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-reception.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-entrance-corridor.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-entrance-evening.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-lounge-design.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-cardio-design.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-fitness-floor-design.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-strength-floor-design.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-functional-zone-design.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-corridor-design.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-washroom-design.webp\"]"
   },
   {
     "id": 14,
@@ -56,8 +56,8 @@ export const fallbackProjects = [
     "location": "The Westerlies, Sector 108, Gurugram",
     "area": "3,240 sq ft",
     "completionDate": "2024",
-    "coverImage": "/images/responsive/duplex-villa-exterior-c77a1c8b29e3-1280.webp",
+    "coverImage": "https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/duplex-villa-exterior.webp",
     "description": "Turnkey luxury duplex villa crafted with modern architecture, premium structural engineering, and high-end finishes in The Westerlies, Sector 108, Gurugram.",
-    "images": "[\"/images/responsive/duplex-villa-exterior-c77a1c8b29e3-1280.webp\",\"/images/responsive/duplex-villa-carved-wooden-door-e5aace3f4a66-1280.webp\",\"/images/responsive/duplex-villa-rooftop-swings-5d422eeb917f-1280.webp\",\"/images/responsive/duplex-villa-bathroom-9532d44f6509-1280.webp\",\"/images/responsive/duplex-villa-pendant-lamps-46795076442e-1280.webp\"]"
+    "images": "[\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/duplex-villa-exterior.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/duplex-villa-carved-wooden-door.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/duplex-villa-rooftop-swings.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/duplex-villa-bathroom.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/duplex-villa-pendant-lamps.webp\"]"
   }
 ];

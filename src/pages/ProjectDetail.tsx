@@ -15,6 +15,7 @@ import { fallbackProjects } from "@/sections/Projects";
 import HouseAnimation from "@/components/HouseAnimation";
 import Image from "@/components/Image";
 import SEO from "@/components/SEO";
+import { projectImages } from "@/lib/project-images";
 
 export default function ProjectDetail() {
   const { slug } = useParams();
@@ -111,25 +112,12 @@ export default function ProjectDetail() {
 
   const activeProject = dbProject ? (() => {
     const fallback = fallbackMatch;
-    const rawImages = dbProject.images as unknown;
-    let dbImages: string[] = [];
-    if (typeof rawImages === "string") {
-      try {
-        const parsed = JSON.parse(rawImages);
-        dbImages = Array.isArray(parsed) ? parsed.filter((image): image is string => typeof image === "string" && image.trim().length > 0) : [];
-      } catch {
-        dbImages = rawImages.split(",").map((image) => image.trim()).filter(Boolean);
-      }
-    } else if (Array.isArray(rawImages)) {
-      dbImages = rawImages.filter((image): image is string => typeof image === "string" && image.trim().length > 0);
-    }
-    const fallbackImages = fallback?.images ? JSON.parse(fallback.images).filter((image: unknown): image is string => typeof image === "string" && image.trim().length > 0) : [];
-    const mergedImages = Array.from(new Set([...fallbackImages, ...dbImages]));
+    const selectedImages = projectImages(dbProject.slug, dbProject.images, fallback?.images);
     return {
       ...dbProject,
       ...(dbProject.slug === 'cvn' && fallback ? { description: fallback.description, completionDate: fallback.completionDate } : {}),
       coverImage: fallback?.coverImage || (dbProject as any).coverImage || "",
-      images: JSON.stringify(mergedImages.length ? mergedImages : [fallback?.coverImage].filter(Boolean)),
+      images: JSON.stringify(selectedImages.length ? selectedImages : [fallback?.coverImage].filter(Boolean)),
     };
   })() : (fallbackMatch ? {
     id: fallbackMatch.id || 0,
@@ -141,7 +129,7 @@ export default function ProjectDetail() {
     duration: "18 Months",
     type: fallbackMatch.type,
     status: "completed",
-    images: (fallbackMatch as any).images || JSON.stringify([fallbackMatch.coverImage]),
+    images: JSON.stringify(projectImages(slug, fallbackMatch.images, [fallbackMatch.coverImage])),
     featured: false,
     completionDate: fallbackMatch.completionDate,
     reviewerName: "",
@@ -170,7 +158,7 @@ export default function ProjectDetail() {
   // Parse numeric values out of area or use fallbacks for UI demonstration
   const parsedArea = activeProject?.area ? activeProject.area.replace(/[^0-9]/g, "") : "2945";
 
-  if (isLoading && !fallbackMatch) {
+  if (isLoading) {
     return (
       <div className="min-h-screen bg-[#F9F9F9] flex items-center justify-center">
         <div className="w-8 h-8 rounded-full border-4 border-[var(--rc-blue)] border-t-transparent animate-spin" />
@@ -289,7 +277,7 @@ export default function ProjectDetail() {
                         >
                           <Image 
                             src={src}
-                            loading={idx === 0 ? 'eager' : 'lazy'}
+                            loading="eager"
                             fetchPriority={idx === 0 ? 'high' : 'auto'}
                             sizes={ratio === 'portrait' ? '(min-width: 768px) 33vw, 100vw' : '100vw'}
                             onLoad={event => {
@@ -587,12 +575,7 @@ export default function ProjectDetail() {
           
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
             {(otherProjects?.items || []).slice(0, 3).map((op) => {
-              let opImages: string[] = [];
-              try {
-                opImages = op.images ? JSON.parse(op.images) : [];
-              } catch (e) {
-                opImages = op.images ? op.images.split(",").map((s: string) => s.trim()).filter(Boolean) : [];
-              }
+              const opImages = projectImages(op.slug, op.images);
               const opCover = opImages[0] || "/project-gallery.svg";
               
               return (

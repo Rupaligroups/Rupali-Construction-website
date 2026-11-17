@@ -5,6 +5,7 @@ import { MapPin, Maximize2, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link, useSearchParams } from "react-router";
 import Image from "@/components/Image";
+import { projectImages } from "@/lib/project-images";
 
 const filterOptions = ["all", "residential", "commercial", "renovation"] as const;
 
@@ -36,6 +37,7 @@ export default function Projects() {
   ];
 
   const getProjectImage = (project: any) => {
+    if (project.slug === 'quickin-stayz') return projectImages(project.slug, project.images)[0];
     if (project.images) {
       const raw = project.images;
       if (typeof raw === "string") {

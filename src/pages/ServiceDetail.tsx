@@ -10,6 +10,7 @@ import ConsultationModal from "@/components/ConsultationModal";
 import { trpc } from "@/providers/trpc";
 import { fallbackProjects } from "@/sections/Projects";
 import Image from "@/components/Image";
+import { projectImages } from "@/lib/project-images";
 import { 
   ArrowLeft, CheckCircle2, ShieldCheck, Clock, 
   Sparkles, Phone, ArrowRight, HelpCircle, ChevronRight,
@@ -438,6 +439,7 @@ export default function ServiceDetail() {
                 }
                 const slugToUse = p.slug || p.name.toLowerCase().replace(/\s+/g, '-');
                 const isQuickInHighlight = (p.name || "").toLowerCase().includes("quickin") || (p.slug || "").includes("quickin");
+                if (isQuickInHighlight) coverImg = projectImages('quickin-stayz', (p as any).images)[0];
 
                 return (
                   <Link
