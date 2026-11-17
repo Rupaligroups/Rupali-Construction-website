@@ -288,7 +288,7 @@ export default function ProjectDetail() {
                               }
                             }}
                             alt={`${activeProject.name} in ${activeProject.location || "Gurugram"} - Luxury Construction & Architectural Design photo ${idx + 1} by Rupali Construction`} 
-                            className={`w-full h-full pointer-events-none select-none ${activeProject.slug === 'cvn' ? 'object-contain md:object-cover' : 'object-cover'}`}
+                            className={`w-full h-full pointer-events-none select-none ${activeProject.slug === 'cvn' || (activeProject.slug === 'quickin-stayz' && idx === 0) ? 'object-contain md:object-cover' : 'object-cover'}`}
                           />
                           {idx === displayImages.length - 1 && (
                             <button 
