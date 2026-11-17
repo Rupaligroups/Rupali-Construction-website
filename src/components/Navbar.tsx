@@ -60,6 +60,15 @@ export default function Navbar() {
     };
   }, [location.pathname]);
 
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKeyDown = (event: KeyboardEvent) => { if (event.key === "Escape") setMobileOpen(false); };
+    window.addEventListener("keydown", onKeyDown);
+    return () => { document.body.style.overflow = previousOverflow; window.removeEventListener("keydown", onKeyDown); };
+  }, [mobileOpen]);
+
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },
@@ -70,14 +79,16 @@ export default function Navbar() {
     { label: "Contact", href: "/contact" },
   ];
 
-  const navBgClass = isDarkSection
+  const navBgClass = mobileOpen
+    ? (isDarkSection ? "bg-[#0b2e59]" : "bg-white")
+    : isDarkSection
     ? "bg-[var(--rc-blue)]/90 backdrop-blur-xl shadow-lg border-b border-white/10"
     : scrolled
     ? "bg-white/90 backdrop-blur-xl shadow-[0_1px_0_rgba(0,0,0,0.05)]"
     : "bg-transparent";
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${navBgClass}`}>
+    <header className={`fixed top-0 left-0 right-0 z-[70] transition-all duration-500 ${navBgClass}`}>
       <div className="container-rc flex items-center justify-between h-20 lg:h-24">
         <Link 
           to="/" 
@@ -236,6 +247,8 @@ export default function Navbar() {
             onClick={() => setMobileOpen(!mobileOpen)}
             className="p-2 group relative z-50 w-12 h-12 flex flex-col items-end justify-center gap-[6px]"
             aria-label="Toggle Menu"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-navigation"
           >
             <span className={`block h-[1.5px] bg-current transition-all duration-500 ease-[cubic-bezier(0.85,0,0.15,1)] origin-center ${
               mobileOpen ? 'w-6 rotate-45 translate-y-[7.5px]' : 'w-7 group-hover:w-5'
@@ -253,11 +266,12 @@ export default function Navbar() {
       </div>
 
       <div 
-        className={`md:hidden fixed inset-0 top-[80px] h-[calc(100vh-80px)] overflow-y-auto backdrop-blur-2xl transition-all duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] flex flex-col z-40 ${
-          mobileOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-8"
-        } ${isDarkSection ? "bg-[var(--rc-blue)]/95" : "bg-white/95"}`}
+        id="mobile-navigation"
+        className={`lg:hidden fixed inset-x-0 bottom-0 top-[80px] h-[calc(100dvh-80px)] overflow-y-auto overscroll-contain transition-opacity duration-200 flex flex-col z-40 ${
+          mobileOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
+        } ${isDarkSection ? "bg-[#0b2e59]" : "bg-white"}`}
       >
-        <nav className="container-rc py-10 flex flex-col gap-6 flex-grow">
+        <nav className="container-rc w-full py-5 flex flex-col gap-3 flex-grow sm:py-8 sm:gap-5">
           {navLinks.map((link, i) => (
             <Link
               key={link.href}
@@ -266,7 +280,7 @@ export default function Navbar() {
                 setMobileOpen(false);
                 window.scrollTo(0, 0);
               }}
-              className={`group flex items-center justify-between text-3xl sm:text-4xl font-light tracking-tight transition-all duration-300 ${
+              className={`group flex items-center justify-between min-h-11 text-2xl sm:text-3xl font-light tracking-tight transition-all duration-300 ${
                 isDarkSection ? "text-white/90 hover:text-[var(--rc-orange)]" : "text-[var(--rc-dark)]/80 hover:text-[var(--rc-blue)]"
               }`}
               style={{ transitionDelay: mobileOpen ? `${i * 50}ms` : '0ms' }}
@@ -280,11 +294,11 @@ export default function Navbar() {
             </Link>
           ))}
 
-          <div className={`mt-auto pt-10 flex flex-col gap-4 w-full transition-all duration-700 delay-300 ${mobileOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div className={`mt-auto pt-6 pb-5 flex flex-col gap-3 w-full transition-all duration-700 delay-300 ${mobileOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <Link
               to="/contact"
               onClick={() => setMobileOpen(false)}
-              className={`w-full py-5 text-sm font-bold tracking-[0.2em] uppercase text-center transition-all duration-300 rounded-2xl shadow-xl hover:-translate-y-1 ${
+              className={`w-full py-3.5 text-sm font-bold tracking-[0.2em] uppercase text-center transition-all duration-300 rounded-2xl shadow-xl hover:-translate-y-1 ${
                 isDarkSection 
                   ? "bg-white text-[var(--rc-blue)] hover:bg-[var(--rc-orange)] hover:text-white shadow-black/10 hover:shadow-[var(--rc-orange)]/20"
                   : "bg-[var(--rc-orange)] text-white hover:bg-[var(--rc-blue)] shadow-[var(--rc-orange)]/20 hover:shadow-[var(--rc-blue)]/30"

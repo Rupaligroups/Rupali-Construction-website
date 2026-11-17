@@ -72,13 +72,13 @@ export default function FloatingActions() {
   ];
 
   return (
-    <div 
-      className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3" 
+    <div
+      className="fixed bottom-4 right-3 z-50 flex flex-col items-end gap-2 sm:bottom-6 sm:right-6 sm:gap-3"
       ref={menuRef}
       onMouseEnter={() => setIsMenuOpen(true)}
       onMouseLeave={() => setIsMenuOpen(false)}
     >
-      
+
       {/* Contact Menu Options */}
       <AnimatePresence>
         {isMenuOpen && (
@@ -113,7 +113,7 @@ export default function FloatingActions() {
       {/* Main Contact Button */}
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="w-14 h-14 bg-[var(--rc-orange)] text-white rounded-full flex items-center justify-center shadow-[0_4px_14px_0_rgba(255,90,31,0.39)] hover:brightness-110 hover:shadow-[0_6px_20px_rgba(255,90,31,0.3)] hover:scale-105 transition-all duration-300 focus:outline-none z-10"
+        className="w-11 h-11 sm:w-14 sm:h-14 bg-[var(--rc-orange)] text-white rounded-full flex items-center justify-center shadow-[0_4px_14px_0_rgba(255,90,31,0.39)] hover:brightness-110 hover:shadow-[0_6px_20px_rgba(255,90,31,0.3)] hover:scale-105 transition-all duration-300 focus:outline-none z-10"
         aria-label="Contact Options"
       >
         {isMenuOpen ? <X className="w-7 h-7" /> : <MessageCircle className="w-7 h-7" />}
@@ -127,7 +127,7 @@ export default function FloatingActions() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.8 }}
             onClick={scrollToTop}
-            className="w-12 h-12 bg-[var(--rc-dark)] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[var(--rc-orange)] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--rc-orange)] focus:ring-offset-2 mt-2"
+            className="w-11 h-11 sm:w-12 sm:h-12 bg-[var(--rc-dark)] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[var(--rc-orange)] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--rc-orange)] focus:ring-offset-2 mt-1 sm:mt-2"
             aria-label="Back to Top"
           >
             <ArrowUp className="w-5 h-5" />
