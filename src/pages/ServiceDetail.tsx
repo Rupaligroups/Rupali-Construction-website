@@ -169,11 +169,11 @@ export default function ServiceDetail() {
       />
       <Navbar />
 
-      <main className="pt-24 pb-14 md:pt-28 md:pb-20">
+      <main className="pt-28 pb-14 md:pt-28 md:pb-20">
         
         {/* Navigation Breadcrumb */}
         <div className="container-rc mb-6">
-          <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-500 font-medium">
+          <div className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-gray-500 font-medium">
             <Link to="/" className="hover:text-[var(--rc-dark)] transition-colors">Home</Link>
             <span>/</span>
             <Link to="/services" className="hover:text-[var(--rc-dark)] transition-colors">Services</Link>
@@ -197,7 +197,7 @@ export default function ServiceDetail() {
 
             <div className="relative z-10 max-w-3xl">
               <div className="relative mb-5 overflow-hidden rounded-2xl md:hidden">
-                <img src={service.heroImage} alt="" className="aspect-[2/1] sm:aspect-[16/9] w-full object-cover" />
+                <img src={service.heroImage} alt={service.slug === 'residential-construction' ? 'Duplex Luxury Villa project by Rupali Construction' : ''} className="aspect-[2/1] sm:aspect-[16/9] w-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F2747]/45 to-transparent" />
               </div>
               {/* Category Badge */}

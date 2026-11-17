@@ -56,7 +56,7 @@ export const servicesData: ServiceDetailItem[] = [
     title: "Luxury Residential & Turnkey Villa Construction",
     shortTitle: "Residential Construction",
     tagline: "End-to-end bespoke home building in DLF, Sushant Lok, and Gurgaon with precision civil engineering.",
-    heroImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80",
+    heroImage: "https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/duplex-villa-exterior.webp",
     iconName: "Home",
     projectTypeFilter: "residential",
     overview: "We engineer and construct custom luxury villas, builder floors, and multi-generational residences from empty plots to finished turnkey homes. Having constructed over 550+ luxury residential homes and villas across Gurgaon, DLF, and Sushant Lok, we deliver uncompromising luxury with fixed pricing and guaranteed timelines.",

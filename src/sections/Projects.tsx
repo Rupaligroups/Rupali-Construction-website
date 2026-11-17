@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Link, useSearchParams } from "react-router";
 import Image from "@/components/Image";
 import { projectImages } from "@/lib/project-images";
+import { filterProjectsByType } from "@/lib/project-filters";
 
 const filterOptions = ["all", "residential", "commercial", "renovation"] as const;
 
@@ -31,10 +32,10 @@ export default function Projects() {
     const fallback = project.slug === "cvn" ? fallbackProjects.find(item => item.slug === "cvn") : undefined;
     return fallback ? { ...project, completionDate: fallback.completionDate } : project;
   });
-  const projects = [
+  const projects = filterProjectsByType([
     ...liveProjects,
     ...fallbackProjects.filter((fallback) => !liveProjects.some((project: any) => project.slug === fallback.slug)),
-  ];
+  ], activeFilter);
 
   const getProjectImage = (project: any) => {
     if (project.slug === 'quickin-stayz') return projectImages(project.slug, project.images)[0];
@@ -109,6 +110,7 @@ export default function Projects() {
           </div>
         </div>
 
+        {projects.length === 0 && <p className="py-6 text-center text-sm text-[var(--rc-muted)]">No {activeFilter === 'all' ? '' : `${activeFilter} `}projects to show yet.</p>}
         {/* Desktop Grid - hidden on mobile */}
         {/* Desktop Grid - hidden on mobile */}
         <div className="hidden md:flex md:flex-wrap justify-center gap-6">
