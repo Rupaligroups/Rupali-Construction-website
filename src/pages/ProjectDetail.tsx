@@ -20,6 +20,9 @@ import { projectImages } from "@/lib/project-images";
 export default function ProjectDetail() {
   const { slug } = useParams();
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const [descriptionExpanded, setDescriptionExpanded] = useState(false);
+  const [descriptionHasMore, setDescriptionHasMore] = useState(false);
+  const descriptionRef = useRef<HTMLDivElement>(null);
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: false,
@@ -154,6 +157,20 @@ export default function ProjectDetail() {
   
   const displayImages = images.length > 0 ? images : [mainImage];
   const [aspectRatios, setAspectRatios] = useState<Record<string, 'portrait' | 'landscape'>>({});
+
+  useEffect(() => { setDescriptionExpanded(false); }, [slug]);
+  useEffect(() => {
+    const element = descriptionRef.current;
+    if (!element) return;
+    const measure = () => {
+      const lineHeight = parseFloat(window.getComputedStyle(element).lineHeight);
+      setDescriptionHasMore(element.scrollHeight > lineHeight * 2 + 1);
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [slug, isLoading, activeProject?.description]);
 
   // Parse numeric values out of area or use fallbacks for UI demonstration
   const parsedArea = activeProject?.area ? activeProject.area.replace(/[^0-9]/g, "") : "2945";
@@ -467,9 +484,11 @@ export default function ProjectDetail() {
 
             {/* About this project */}
             <div>
-              <h2 className="text-3xl font-bold text-[#0F172A] mb-6">About this {activeProject.type === 'residential' ? 'home' : 'project'}</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#0F172A] mb-3 sm:mb-6">About this {activeProject.type === 'residential' ? 'home' : 'project'}</h2>
               <div 
-                className="prose prose-lg max-w-none text-gray-600 leading-relaxed"
+                id="project-description"
+                ref={descriptionRef}
+                className={`prose max-w-none text-base leading-6 text-gray-600 ${descriptionExpanded ? '' : 'max-h-12 overflow-hidden'}`}
                 dangerouslySetInnerHTML={{ 
                   __html: activeProject.description || `
                   <p>A beautifully executed ${activeProject.type || 'construction'} project located in ${activeProject.location || 'a prime location'}. Designed and developed with utmost attention to detail and modern architecture.</p>
@@ -477,6 +496,7 @@ export default function ProjectDetail() {
                   ` 
                 }} 
               />
+              {descriptionHasMore && <button type="button" aria-expanded={descriptionExpanded} aria-controls="project-description" onClick={() => setDescriptionExpanded(value => !value)} className="mt-2 min-h-11 text-sm font-semibold text-[var(--rc-blue)] underline underline-offset-4 hover:text-[var(--rc-orange)]">{descriptionExpanded ? 'Read less' : 'Read more'}</button>}
             </div>
 
             {/* What this property offers */}
