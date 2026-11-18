@@ -5,6 +5,7 @@ import Footer from "@/sections/Footer";
 import { ArrowLeft, Calendar, User, Clock, ArrowRight, Calculator, PhoneCall, ShieldCheck } from "lucide-react";
 import { fallbackPosts } from "./Blog";
 import SEO from "@/components/SEO";
+import { blogCoverImage } from "@/lib/blog-images";
 
 export default function BlogDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -22,7 +23,7 @@ export default function BlogDetail() {
           title={`${post.title} | Construction Insights | Rupali Construction`}
           description={post.excerpt || (post.content && post.content.substring(0, 160)) || "Read expert construction and architecture insights from Rupali Construction."}
           keywords={`${post.category || 'construction'}, blog, Gurgaon, construction insights, architecture`}
-          image={post.coverImage || "https://rupaliconstruction.com/logo-main.webp"}
+          image={post.coverImage ? blogCoverImage(post.coverImage) : "https://rupaliconstruction.com/logo-main.webp"}
           url={`/blog/${post.slug || slug}`}
           type="article"
           schema={[
@@ -30,7 +31,7 @@ export default function BlogDetail() {
               "@context": "https://schema.org",
               "@type": "BlogPosting",
               "headline": post.title,
-              "image": [post.coverImage || "https://rupaliconstruction.com/logo-main.webp"],
+              "image": [post.coverImage ? new URL(blogCoverImage(post.coverImage), 'https://rupaliconstruction.com').href : "https://rupaliconstruction.com/logo-main.webp"],
               "datePublished": post.createdAt ? new Date(post.createdAt).toISOString() : new Date().toISOString(),
               "author": {
                 "@type": "Organization",

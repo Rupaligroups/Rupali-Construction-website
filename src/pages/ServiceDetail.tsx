@@ -190,6 +190,7 @@ export default function ServiceDetail() {
               <img 
                 src={service.heroImage} 
                 alt={service.title} 
+                onError={(event) => { if (!event.currentTarget.src.endsWith('/images/whyus_quality.webp')) event.currentTarget.src = '/images/whyus_quality.webp'; }}
                 className="w-full h-full object-cover object-center scale-105" 
               />
               <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] via-[#0F172A]/70 to-transparent" />
@@ -197,7 +198,7 @@ export default function ServiceDetail() {
 
             <div className="relative z-10 max-w-3xl">
               <div className="relative mb-5 overflow-hidden rounded-2xl md:hidden">
-                <img src={service.heroImage} alt={service.slug === 'residential-construction' ? 'Duplex Luxury Villa project by Rupali Construction' : ''} className="aspect-[2/1] sm:aspect-[16/9] w-full object-cover" />
+                <img src={service.heroImage} onError={(event) => { if (!event.currentTarget.src.endsWith('/images/whyus_quality.webp')) { event.currentTarget.alt = ''; event.currentTarget.src = '/images/whyus_quality.webp'; } }} alt={service.slug === 'residential-construction' ? 'Duplex Luxury Villa project by Rupali Construction' : ''} className="aspect-[2/1] sm:aspect-[16/9] w-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0F2747]/45 to-transparent" />
               </div>
               {/* Category Badge */}

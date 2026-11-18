@@ -146,7 +146,7 @@ export default function Leadership() {
             </nav>
           </motion.header>
 
-          <div className="flex flex-col gap-24 lg:gap-32 max-w-5xl mx-auto">
+          <div className="flex flex-col gap-12 md:gap-24 lg:gap-32 max-w-5xl mx-auto">
             {leaders.map((leader, index) => {
               // Image on Right for 0 and 2. Image on Left for 1.
               const isImageRight = index % 2 === 0;
@@ -156,18 +156,18 @@ export default function Leadership() {
                   key={leader.name}
                   id={`leader-${index}`}
                   style={{ scrollMarginTop: "110px" }}
-                  className={`flex flex-row items-center gap-4 md:gap-12 lg:gap-20 ${
-                    isImageRight ? "" : "flex-row-reverse"
+                  className={`flex flex-col-reverse items-center gap-5 md:flex-row md:gap-12 lg:gap-20 ${
+                    isImageRight ? "" : "md:flex-row-reverse"
                   }`}
                 >
                   {/* Text Section */}
-                  <div className="w-1/2 flex flex-col justify-center">
+                  <div className="w-full md:w-1/2 flex flex-col justify-center">
                     <motion.div
                       initial={{ opacity: 0, x: isImageRight ? -50 : 50, rotate: isImageRight ? -2 : 2 }}
                       whileInView={{ opacity: 1, x: 0, rotate: 0 }}
                       viewport={{ once: true, margin: "-50px" }}
                       transition={{ type: "spring", stiffness: 100, damping: 20 }}
-                      className="relative z-10 bg-white/50 backdrop-blur-sm p-3 sm:p-5 md:p-8 rounded-2xl md:rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white"
+                      className="relative z-10 bg-white/50 backdrop-blur-sm p-4 sm:p-5 md:p-8 rounded-2xl md:rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white"
                     >
                       <motion.span 
                         whileHover={{ x: 5 }}
@@ -184,7 +184,7 @@ export default function Leadership() {
                         {leader.name}
                       </motion.h2>
                       
-                      <p className="text-[10px] sm:text-xs md:text-base lg:text-lg text-[var(--rc-text)]/70 leading-relaxed mb-4 md:mb-8">
+                      <p className="text-sm md:text-base lg:text-lg text-[var(--rc-text)]/70 leading-relaxed mb-4 md:mb-8">
                         {leader.description}
                       </p>
 
@@ -202,7 +202,7 @@ export default function Leadership() {
                             <div className="w-5 h-5 md:w-8 md:h-8 rounded-full bg-[var(--rc-blue)]/10 group-hover:bg-white flex items-center justify-center shrink-0 shadow-inner">
                               <Check className="w-3 h-3 md:w-5 md:h-5 text-[var(--rc-blue)] group-hover:text-[var(--rc-orange)]" strokeWidth={3} />
                             </div>
-                            <span className="text-[var(--rc-dark)] group-hover:text-white font-bold text-[9px] sm:text-[10px] md:text-base lg:text-lg drop-shadow-sm line-clamp-1">{specialty}</span>
+                            <span className="text-[var(--rc-dark)] group-hover:text-white font-bold text-xs md:text-base lg:text-lg drop-shadow-sm">{specialty}</span>
                           </motion.div>
                         ))}
                       </div>
@@ -211,7 +211,7 @@ export default function Leadership() {
                   </div>
 
                   {/* Image Section */}
-                  <div className={`w-1/2 relative flex justify-center items-center mt-4 md:mt-8 lg:-mt-10 ${index === 0 ? "lg:-mt-16" : ""}`}>
+                  <div className={`w-32 sm:w-40 md:w-1/2 relative flex justify-center items-center mt-4 md:mt-8 lg:-mt-10 ${index === 0 ? "lg:-mt-16" : ""}`}>
                     <motion.div
                       initial={{ opacity: 0, scale: 0.8, rotate: isImageRight ? 5 : -5 }}
                       whileInView={{ opacity: 1, scale: 1, rotate: 0 }}

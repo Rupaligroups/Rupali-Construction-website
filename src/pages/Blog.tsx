@@ -8,6 +8,7 @@ import Footer from "@/sections/Footer";
 import { Calendar, Clock, ArrowRight, PenLine } from "lucide-react";
 import SEO from "@/components/SEO";
 import SubmitBlogModal from "@/components/SubmitBlogModal";
+import { BLOG_IMAGE_FALLBACK, blogCoverImage } from "@/lib/blog-images";
 
 export default function Blog() {
   const { data, isLoading, refetch } = trpc.blog.list.useQuery({ limit: 12 });
@@ -115,7 +116,7 @@ export default function Blog() {
                 >
                   <div className="aspect-[16/10] bg-[var(--rc-blue)]/10 flex items-center justify-center relative overflow-hidden">
                     {post.coverImage ? (
-                      <img loading="lazy" src={post.coverImage} alt={post.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                      <img loading="lazy" src={blogCoverImage(post.coverImage)} onError={(event) => { if (!event.currentTarget.src.endsWith(BLOG_IMAGE_FALLBACK)) event.currentTarget.src = BLOG_IMAGE_FALLBACK; }} alt={post.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     ) : (
                       <span className="text-4xl font-bold text-[var(--rc-blue)]/20">
                         {(post.title || "B").charAt(0)}

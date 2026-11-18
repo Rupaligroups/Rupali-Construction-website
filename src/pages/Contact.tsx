@@ -36,7 +36,7 @@ export default function Contact() {
     submitMutation.mutate(form);
   };
 
-  const inputClasses = "w-full px-4 py-3.5 border border-white/60 rounded-xl bg-white/50 backdrop-blur-md focus:border-[var(--rc-orange)] focus:ring-1 focus:ring-[var(--rc-orange)] focus:outline-none transition-all placeholder:text-[var(--rc-muted)]/70";
+  const inputClasses = "w-full min-w-0 px-4 py-3.5 text-base border border-white/60 rounded-xl bg-white/50 backdrop-blur-md focus:border-[var(--rc-orange)] focus:ring-1 focus:ring-[var(--rc-orange)] focus:outline-none transition-all placeholder:text-[var(--rc-muted)]/70";
 
 
   return (
@@ -127,7 +127,7 @@ export default function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-2 gap-4 md:gap-6">
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6">
                     <div>
                       <label className="text-label text-[var(--rc-dark)] font-semibold mb-2 block">
                         Full Name *
@@ -156,7 +156,7 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4 md:gap-6">
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6">
                     <div>
                       <label className="text-label text-[var(--rc-dark)] font-semibold mb-2 block">
                         Phone (Optional)
@@ -183,7 +183,7 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-4 md:gap-6">
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6">
                     <div>
                       <label className="text-label text-[var(--rc-dark)] font-semibold mb-2 block">
                         Service Required (Optional)
@@ -266,7 +266,7 @@ export default function Contact() {
                 <h3 className="text-lg font-semibold text-[var(--rc-dark)] mb-4">
                   Contact Information
                 </h3>
-                <div className="grid grid-cols-2 gap-6 lg:grid-cols-1 lg:gap-4">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-1 lg:gap-4">
                   <div className="flex flex-col sm:flex-row items-start gap-2 sm:gap-3">
                     <MapPin className="w-5 h-5 text-[var(--rc-orange)] sm:mt-0.5 flex-shrink-0" />
                     <div>
@@ -296,7 +296,7 @@ export default function Contact() {
                       <p className="font-medium text-[var(--rc-dark)] text-sm sm:text-base">Email</p>
                       <a
                         href="mailto:ujjwalt.rg@rupalihomes.com"
-                        className="text-[10px] sm:text-sm text-[var(--rc-muted)] hover:text-[var(--rc-blue)] mt-0.5 block break-all"
+                        className="text-sm text-[var(--rc-muted)] hover:text-[var(--rc-blue)] mt-0.5 block break-all"
                       >
                         ujjwalt.rg@rupalihomes.com
                       </a>

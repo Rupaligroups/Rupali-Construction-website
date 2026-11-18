@@ -736,7 +736,7 @@ export const servicesData: ServiceDetailItem[] = [
     title: "Advanced Structural Engineering & Health Audits",
     shortTitle: "Structural Engineering",
     tagline: "Rigorous mathematical modeling, Seismic Zone IV safety compliance, and certified non-destructive structural audits.",
-    heroImage: "https://images.unsplash.com/photo-1541888946425-d0fbb186c5f7?auto=format&fit=crop&q=80",
+    heroImage: "/images/whyus_quality.webp",
     iconName: "HardHat",
     projectTypeFilter: "residential",
     overview: "We provide high-precision structural analysis and engineering for luxury residences, commercial complexes, and older buildings requiring stability certification. Our certified structural engineers use STAAD.Pro and ETABS to design earthquake-resilient structures while optimizing steel tonnage.",
