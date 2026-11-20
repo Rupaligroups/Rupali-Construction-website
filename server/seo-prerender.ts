@@ -5,6 +5,7 @@ import { homeHtml } from "../shared/home-html.js";
 import { buildingGuide } from "../shared/building-guide.js";
 import { fallbackPosts } from "../shared/blog-content.js";
 import { fallbackProjects } from "../shared/project-content.js";
+import { getResponsiveImage } from "../src/lib/responsive-images.js";
 import { business, homeSeo, localBusinessSchema, localFaqSchema } from "../shared/local-seo.js";
 import type { Context } from "hono";
 import fs from "fs";
@@ -200,7 +201,10 @@ async function resolvePageData(pathname: string): Promise<PageData> {
 
   if (cleanPath === "/projects") {
     let projectsHtml = fallbackProjects.map(p => {
-      const imgTag = p.coverImage ? `<img src="${escapeHtml(p.coverImage)}" alt="${escapeHtml(p.name)}" loading="lazy" style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 12px; margin-bottom: 0.75rem;" />` : "";
+      const resp = getResponsiveImage(p.coverImage);
+      const srcToUse = resp?.src || p.coverImage;
+      const srcSetAttr = resp?.srcSet ? ` srcset="${escapeHtml(resp.srcSet)}"` : "";
+      const imgTag = srcToUse ? `<img src="${escapeHtml(srcToUse)}"${srcSetAttr} alt="${escapeHtml(p.name)}" loading="lazy" style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 12px; margin-bottom: 0.75rem;" />` : "";
       return `<article style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1.5rem;">${imgTag}<h2><a href="/projects/${escapeHtml(p.slug)}">${escapeHtml(p.name)}</a></h2><p>${escapeHtml(p.description)}</p></article>`;
     }).join("");
     try {
@@ -217,7 +221,10 @@ async function resolvePageData(pathname: string): Promise<PageData> {
             }
           } catch {}
           if (!coverImg) coverImg = fallback?.coverImage || "";
-          const imgTag = coverImg ? `<img src="${escapeHtml(coverImg)}" alt="${escapeHtml(p.name)}" loading="lazy" style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 12px; margin-bottom: 0.75rem;" />` : "";
+          const resp = getResponsiveImage(coverImg);
+          const srcToUse = resp?.src || coverImg;
+          const srcSetAttr = resp?.srcSet ? ` srcset="${escapeHtml(resp.srcSet)}"` : "";
+          const imgTag = srcToUse ? `<img src="${escapeHtml(srcToUse)}"${srcSetAttr} alt="${escapeHtml(p.name)}" loading="lazy" style="width: 100%; max-height: 280px; object-fit: cover; border-radius: 12px; margin-bottom: 0.75rem;" />` : "";
           return `
           <div style="margin-bottom: 2rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
             ${imgTag}
@@ -280,7 +287,10 @@ async function resolvePageData(pathname: string): Promise<PageData> {
           // Ignore json parse error for image fallback
         }
 
-        const heroImageTag = imageUrl !== DEFAULT_IMAGE ? `<img src="${escapeHtml(imageUrl)}" alt="${escapeHtml(proj.name)}" style="width: 100%; max-height: 480px; object-fit: cover; border-radius: 12px; margin: 1.5rem 0;" />` : "";
+        const resp = getResponsiveImage(imageUrl);
+        const heroSrc = resp?.src || imageUrl;
+        const heroSrcSet = resp?.srcSet ? ` srcset="${escapeHtml(resp.srcSet)}"` : "";
+        const heroImageTag = heroSrc !== DEFAULT_IMAGE ? `<img src="${escapeHtml(heroSrc)}"${heroSrcSet} alt="${escapeHtml(proj.name)}" style="width: 100%; max-height: 480px; object-fit: cover; border-radius: 12px; margin: 1.5rem 0;" />` : "";
 
         const jsonLd = {
           "@context": "https://schema.org", "@type": "CreativeWork",
