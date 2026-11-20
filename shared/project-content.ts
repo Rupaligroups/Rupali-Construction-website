@@ -32,9 +32,17 @@ export const fallbackProjects = [
     "location": "Sector 67, M3M URBANA, Gurgaon",
     "area": "11,000 sq ft",
     "completionDate": "2024",
-    "coverImage": "https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-training-floor.webp",
+    "coverImage": "/images/responsive/gold-gym-front-c99cf5f87791-1182.webp",
     "description": "State-of-the-art commercial fitness facility with heavy reinforced civil flooring, industrial acoustic isolation, and premium MEP systems at M3M Urbana, Sector 67, Gurgaon.",
-    "images": "[\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-training-floor.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-training-floor-interior.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-strength-area.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-reception.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-entrance-corridor.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-entrance-evening.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-lounge-design.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-cardio-design.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-fitness-floor-design.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-strength-floor-design.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-functional-zone-design.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-corridor-design.webp\",\"https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/gold-gym-sector-67-washroom-design.webp\"]"
+    "images": JSON.stringify([
+      "/images/responsive/gold-gym-front-c99cf5f87791-1182.webp",
+      "/images/responsive/gold-gym-weights-eb08b99a1ad7-1178.webp",
+      "/images/responsive/gold-gym-cardio-2faa10042326-1184.webp",
+      "/images/responsive/gold-gym-machines-5a51d9700696-1180.webp",
+      "/images/responsive/gold-gym-studio-b22c17709593-1177.webp",
+      "/images/responsive/gold-gym-interior-40ce4e332b45-1182.webp",
+      "/images/responsive/gold-gym-training-a106b475de39-1180.webp"
+    ])
   },
   {
     "id": 14,

@@ -8,9 +8,17 @@ type OptimizedImage = {
 };
 const images: Record<string, OptimizedImage> = manifest;
 
+const variantIndex = new Map<string, OptimizedImage>();
+for (const image of Object.values(images)) {
+  for (const variant of image.variants) {
+    variantIndex.set(variant.src, image);
+  }
+}
+
 // Exact URL matching leaves new admin uploads and unrelated images untouched.
 export function getResponsiveImage(src?: string) {
-  const image = src ? images[src] : undefined;
+  if (!src) return undefined;
+  const image = images[src] || variantIndex.get(src);
   if (!image) return undefined;
   return {
     width: image.width,

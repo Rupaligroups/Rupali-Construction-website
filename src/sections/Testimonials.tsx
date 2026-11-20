@@ -8,13 +8,13 @@ export default function Testimonials() {
   const testimonials = data && data.length > 0 ? data : fallbackTestimonials;
 
   const defaultAvatars = [
-    "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=150&h=150&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1497366216548-37526070297c?w=150&h=150&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=150&h=150&fit=crop&q=80",
-    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
-    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+    "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=150&h=150&fit=crop&crop=face&auto=format&fm=webp&q=75",
+    "https://images.unsplash.com/photo-1497366216548-37526070297c?w=150&h=150&fit=crop&crop=face&auto=format&fm=webp&q=75",
+    "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=150&h=150&fit=crop&crop=face&auto=format&fm=webp&q=75",
+    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face&auto=format&fm=webp&q=75",
+    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face&auto=format&fm=webp&q=75",
+    "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face&auto=format&fm=webp&q=75",
+    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face&auto=format&fm=webp&q=75",
   ];
 
   const mappedTestimonials = testimonials.map((t: any, i: number) => ({
@@ -134,21 +134,21 @@ export const fallbackTestimonials = [
     name: "Gold's Gym Management",
     location: "Golf Course Road, Gurgaon",
     rating: 5,
-    avatar: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=150&h=150&fit=crop&q=80",
+    avatar: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=150&h=150&fit=crop&crop=face&auto=format&fm=webp&q=75",
     content: "Rupali Construction engineered and constructed our flagship Gold's Gym facility with exceptional high-load floor capacities, vibration damping for heavy weights, and advanced ventilation. Delivered on schedule with immaculate structural precision.",
   },
   {
     name: "Knowledge Centre Corporate Director",
     location: "Sector 44, Gurgaon",
     rating: 5,
-    avatar: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=150&h=150&fit=crop&q=80",
+    avatar: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=150&h=150&fit=crop&crop=face&auto=format&fm=webp&q=75",
     content: "Building the Knowledge Centre required complex large-span acoustic auditoriums and smart HVAC automation. Rupali Construction's engineering rigor and institutional quality standards exceeded all expectations.",
   },
   {
     name: "Quick & Stays Hospitality Group",
     location: "Sushant Lok 1, Sector 43, Gurgaon",
     rating: 5,
-    avatar: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=150&h=150&fit=crop&q=80",
+    avatar: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=150&h=150&fit=crop&crop=face&auto=format&fm=webp&q=75",
     content: "From core RCC structure to luxury guest room finishes, Quick & Stays Hotel was delivered ahead of schedule with 0% cost overruns. Their turnkey execution and adherence to fire & safety norms was flawless.",
   },
   {

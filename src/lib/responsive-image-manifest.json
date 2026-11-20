@@ -848,5 +848,243 @@
         "bytes": 96426
       }
     ]
+  },
+  "https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/1785225169394-250938775.png": {
+    "width": 1182,
+    "height": 599,
+    "bytes": 1344777,
+    "variants": [
+      {
+        "src": "/images/responsive/gold-gym-front-c99cf5f87791-480.webp",
+        "width": 480,
+        "bytes": 22844
+      },
+      {
+        "src": "/images/responsive/gold-gym-front-c99cf5f87791-1182.webp",
+        "width": 1182,
+        "bytes": 113000
+      }
+    ]
+  },
+  "/images/responsive/gold-gym-front-c99cf5f87791-1182.webp": {
+    "width": 1182,
+    "height": 599,
+    "bytes": 1344777,
+    "variants": [
+      {
+        "src": "/images/responsive/gold-gym-front-c99cf5f87791-480.webp",
+        "width": 480,
+        "bytes": 22844
+      },
+      {
+        "src": "/images/responsive/gold-gym-front-c99cf5f87791-1182.webp",
+        "width": 1182,
+        "bytes": 113000
+      }
+    ]
+  },
+  "https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/1785225169295-375624683.png": {
+    "width": 1178,
+    "height": 613,
+    "bytes": 1147949,
+    "variants": [
+      {
+        "src": "/images/responsive/gold-gym-weights-eb08b99a1ad7-480.webp",
+        "width": 480,
+        "bytes": 21534
+      },
+      {
+        "src": "/images/responsive/gold-gym-weights-eb08b99a1ad7-1178.webp",
+        "width": 1178,
+        "bytes": 80476
+      }
+    ]
+  },
+  "/images/responsive/gold-gym-weights-eb08b99a1ad7-1178.webp": {
+    "width": 1178,
+    "height": 613,
+    "bytes": 1147949,
+    "variants": [
+      {
+        "src": "/images/responsive/gold-gym-weights-eb08b99a1ad7-480.webp",
+        "width": 480,
+        "bytes": 21534
+      },
+      {
+        "src": "/images/responsive/gold-gym-weights-eb08b99a1ad7-1178.webp",
+        "width": 1178,
+        "bytes": 80476
+      }
+    ]
+  },
+  "https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/1785225169344-190570374.png": {
+    "width": 1184,
+    "height": 606,
+    "bytes": 1012254,
+    "variants": [
+      {
+        "src": "/images/responsive/gold-gym-cardio-2faa10042326-480.webp",
+        "width": 480,
+        "bytes": 17856
+      },
+      {
+        "src": "/images/responsive/gold-gym-cardio-2faa10042326-1184.webp",
+        "width": 1184,
+        "bytes": 68462
+      }
+    ]
+  },
+  "/images/responsive/gold-gym-cardio-2faa10042326-1184.webp": {
+    "width": 1184,
+    "height": 606,
+    "bytes": 1012254,
+    "variants": [
+      {
+        "src": "/images/responsive/gold-gym-cardio-2faa10042326-480.webp",
+        "width": 480,
+        "bytes": 17856
+      },
+      {
+        "src": "/images/responsive/gold-gym-cardio-2faa10042326-1184.webp",
+        "width": 1184,
+        "bytes": 68462
+      }
+    ]
+  },
+  "https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/1785225169367-222471526.png": {
+    "width": 1180,
+    "height": 609,
+    "bytes": 1179035,
+    "variants": [
+      {
+        "src": "/images/responsive/gold-gym-machines-5a51d9700696-480.webp",
+        "width": 480,
+        "bytes": 23322
+      },
+      {
+        "src": "/images/responsive/gold-gym-machines-5a51d9700696-1180.webp",
+        "width": 1180,
+        "bytes": 89078
+      }
+    ]
+  },
+  "/images/responsive/gold-gym-machines-5a51d9700696-1180.webp": {
+    "width": 1180,
+    "height": 609,
+    "bytes": 1179035,
+    "variants": [
+      {
+        "src": "/images/responsive/gold-gym-machines-5a51d9700696-480.webp",
+        "width": 480,
+        "bytes": 23322
+      },
+      {
+        "src": "/images/responsive/gold-gym-machines-5a51d9700696-1180.webp",
+        "width": 1180,
+        "bytes": 89078
+      }
+    ]
+  },
+  "https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/1785225169320-757856043.png": {
+    "width": 1177,
+    "height": 598,
+    "bytes": 1057222,
+    "variants": [
+      {
+        "src": "/images/responsive/gold-gym-studio-b22c17709593-480.webp",
+        "width": 480,
+        "bytes": 19364
+      },
+      {
+        "src": "/images/responsive/gold-gym-studio-b22c17709593-1177.webp",
+        "width": 1177,
+        "bytes": 83804
+      }
+    ]
+  },
+  "/images/responsive/gold-gym-studio-b22c17709593-1177.webp": {
+    "width": 1177,
+    "height": 598,
+    "bytes": 1057222,
+    "variants": [
+      {
+        "src": "/images/responsive/gold-gym-studio-b22c17709593-480.webp",
+        "width": 480,
+        "bytes": 19364
+      },
+      {
+        "src": "/images/responsive/gold-gym-studio-b22c17709593-1177.webp",
+        "width": 1177,
+        "bytes": 83804
+      }
+    ]
+  },
+  "https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/1785225169227-411774767.png": {
+    "width": 1182,
+    "height": 663,
+    "bytes": 1298004,
+    "variants": [
+      {
+        "src": "/images/responsive/gold-gym-interior-40ce4e332b45-480.webp",
+        "width": 480,
+        "bytes": 18526
+      },
+      {
+        "src": "/images/responsive/gold-gym-interior-40ce4e332b45-1182.webp",
+        "width": 1182,
+        "bytes": 94748
+      }
+    ]
+  },
+  "/images/responsive/gold-gym-interior-40ce4e332b45-1182.webp": {
+    "width": 1182,
+    "height": 663,
+    "bytes": 1298004,
+    "variants": [
+      {
+        "src": "/images/responsive/gold-gym-interior-40ce4e332b45-480.webp",
+        "width": 480,
+        "bytes": 18526
+      },
+      {
+        "src": "/images/responsive/gold-gym-interior-40ce4e332b45-1182.webp",
+        "width": 1182,
+        "bytes": 94748
+      }
+    ]
+  },
+  "https://tofmglzhxvdozgnwmvhb.supabase.co/storage/v1/object/public/images/1785225169271-859573308.png": {
+    "width": 1180,
+    "height": 607,
+    "bytes": 969157,
+    "variants": [
+      {
+        "src": "/images/responsive/gold-gym-training-a106b475de39-480.webp",
+        "width": 480,
+        "bytes": 14856
+      },
+      {
+        "src": "/images/responsive/gold-gym-training-a106b475de39-1180.webp",
+        "width": 1180,
+        "bytes": 60208
+      }
+    ]
+  },
+  "/images/responsive/gold-gym-training-a106b475de39-1180.webp": {
+    "width": 1180,
+    "height": 607,
+    "bytes": 969157,
+    "variants": [
+      {
+        "src": "/images/responsive/gold-gym-training-a106b475de39-480.webp",
+        "width": 480,
+        "bytes": 14856
+      },
+      {
+        "src": "/images/responsive/gold-gym-training-a106b475de39-1180.webp",
+        "width": 1180,
+        "bytes": 60208
+      }
+    ]
   }
 }

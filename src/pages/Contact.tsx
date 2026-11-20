@@ -79,7 +79,7 @@ export default function Contact() {
       {/* Background Image with Premium Gradient Fade */}
       <div className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none">
         <img 
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80" 
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&fm=webp&w=1920&q=80" 
           alt="Welcoming Modern Home Entrance"
           className="w-full h-full object-cover object-[center_20%] opacity-40 mix-blend-luminosity"
         />
